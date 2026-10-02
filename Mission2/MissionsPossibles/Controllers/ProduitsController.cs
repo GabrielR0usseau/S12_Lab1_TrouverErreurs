@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Mission.Data;
 using Mission.ViewModels;
 using Mission.Models;
+using AspNetCoreGeneratedDocument;
+using Microsoft.AspNetCore.Connections;
 
 namespace Mission.Controllers
 {
@@ -24,7 +26,8 @@ namespace Mission.Controllers
         public async Task<IActionResult> Index()
         {
             // COMPLÉTER ICI
-            return View();
+            var missionDbContext = _context.Produits.Include(prop => prop.Categorie);
+            return View(missionDbContext);
         }
 
     }

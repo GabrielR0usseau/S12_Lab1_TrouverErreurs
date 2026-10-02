@@ -67,7 +67,7 @@ namespace Mission.Controllers
         }
 
         // GET: Categories/Edit/5
-        public async Task<IActionResult> Upsert(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             Categorie categorie = new Categorie();
             if (id == null)
@@ -88,7 +88,7 @@ namespace Mission.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Upsert(Categorie categorie)
+        public async Task<IActionResult> Edit(Categorie categorie)
         {
             if (ModelState.IsValid)
             {

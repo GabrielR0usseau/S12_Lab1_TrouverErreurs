@@ -14,6 +14,8 @@ namespace Mission.Data
 
         public DbSet<Categorie> Categories { get; set; }
 
+        public DbSet<Produit> Produits { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

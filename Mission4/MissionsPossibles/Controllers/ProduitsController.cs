@@ -20,6 +20,7 @@ namespace Mission.Controllers
             _context = context;
         }
 
+
         // GET: Produits
         public async Task<IActionResult> Index()
         {
@@ -49,7 +50,7 @@ namespace Mission.Controllers
         // GET: Produits/Create
         public IActionResult Create()
         {
-         
+            ViewBag.CategorieId = new SelectList(_context.Categories, "Id", "Titre");
             return View();
         }
 
